@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para la mujer de mi vida</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .mensaje {
+            font-size: 1.5em;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px;
+            color: #fff;
+        }
+        .galeria {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .galeria img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .galeria img:hover {
+            transform: scale(1.1);
+        }
+        .frase {
+            font-size: 1.2em;
+            margin-top: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .form-mensaje {
+            margin-top: 30px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+        }
+        .btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #ff758c;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #ff5277;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz Día de la Mujer</h1>
+
+    <p class="mensaje">Princesa. Eres la persona más especial en mi vida, y cada día me demuestras lo increíble que eres. Gracias por ser como eres y por hacerme tan feliz.</p>
+
+    <div class="galeria">
+        <img src="imagen1.jpg" alt="Foto especial">
+        <img src="imagen2.jpg" alt="Foto especial">
+        <img src="imagen3.jpg" alt="Foto especial">
+        <img src="imagen4.jpg" alt="Foto especial">
+        <img src="imagen5.jpg" alt="Foto especial">
+        <img src="imagen6.jpg" alt="Foto especial">
+    </div>
+
+    <p class="frase" id="frase"></p>
+
+    <div class="dedicatoria">
+        <h2>Mi Dedicatoria Especial 💕</h2>
+        <p id="dedicatoriaTexto">Algo bonito para esta persona especial...</p>
+        <textarea id="mensajeUsuario" placeholder="Feliz diaaaa princesa. Espero te guste esto que hice para ti jiji, un estilo unico y original de decirte lo importante y especial que eres para mi mujecita de mi vida y futura madre de mis dos hijos jiji. ¡¡FELIII DIAAA MUJEER!!.  "></textarea>
+    </div>
+
+
+    <script>
+        const frases = [
+            "Feliz Día de la Mujer, mi amor. Eres lo mejor que me ha pasado.",
+            "Hoy celebro a la mujer más increíble: tú. ¡Te amo!",
+            "Nunca olvides lo valiosa que eres para mi.",
+            "Cada día a tu lado es un regalo.",
+            "Amo todo de ti. Gracias por ser parte de mi vida.",
+            "Mi persona favorita merece una dedicatoria unica. ¡Feliz Día de la Mujer!"
+        ];
+
+        function cambiarFrase() {
+            const fraseElement = document.getElementById('frase');
+            const randomIndex = Math.floor(Math.random() * frases.length);
+            fraseElement.innerText = frases[randomIndex];
+        }
+
+        function mostrarMensaje() {
+            const mensaje = document.getElementById('mensajeUsuario').value;
+            if (mensaje) {
+                alert("Tu mensaje especial: " + mensaje);
+            } else {
+                alert("Por favor, escribe un mensaje.");
+            }
+        }
+
+        setInterval(cambiarFrase, 4000); 
+        cambiarFrase();
+    </script>
+
+</body>
+</html>
